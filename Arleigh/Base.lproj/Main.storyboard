@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPr-xw-sH4">
                                 <rect key="frame" x="16" y="603" width="343" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="26"/>
                                 <state key="normal" title="Show Care Card">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -76,8 +76,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="ZmY-3k-09R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
-                                <state key="normal" title="HELLO ARLEIGH">
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="26"/>
+                                <state key="normal" title="Hello Arleigh!">
                                     <color key="titleColor" red="0.99606186151504517" green="0.99590319395065308" blue="0.9923674464225769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>

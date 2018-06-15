@@ -8,11 +8,13 @@
 
 import UIKit
 import CareKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     //one Care Plan Store object that lives during the life of the application in which we set it in the intializer below
     let store: OCKCarePlanStore
+    let speechSynthesizer = AVSpeechSynthesizer()
     
     required init?(coder aDecoder: NSCoder) {
         //1
@@ -27,12 +29,22 @@ class ViewController: UIViewController {
         
     }
     
+    func speakTerms() -> String {
+        let terms = "Arleigh uses push notifications as a way to increase as well as decrease dopamine and or cortisol levels of research participants.  During spike periods, we ask users to complete intervention tasks or assessments in order to measure your symptoms.  Each intervention and assessment is designated by color, based on the time it will take to complete the assessment or level of difficulty.  The application will use Apple’s ResearchKit and CareKit frameworks in an effort to collaborate with Universities such as Georgia State University, Emory University, MIT, and Sage Bio-networks.  The features of the application will be that it utilizes Core Motion, HealthKit, and Core Location frameworks to keep track of your physical activity, breathing, blood pressure, medicine intake, and dieting patterns. You may receive local and remote push notifications alerting you of required tasks to improve your overall health.  Your patient Care Card using Apple’s CareKit framework will list intervention steps to regulate your choices for a desired outcome.  The arching motivator of Arleigh, is offering you the opportunity remain in control of your choices while also monitoring your data for enhanced safety.  Upon your request, we can transmit data to your physician using Arleigh.  We will securely share your care card with your physician or transmit the data securely upon arriving at the hospital.  This can be done at the bluetooth i-beacon station to receive further direct and immediate care."
+        return terms
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //add a single b6 vitamin intake activity to the Care Plan Store
         createb6VitaminActivity()
         //_clearStore()
+        
+        let speechUtterance = AVSpeechUtterance.init(string: speakTerms())
+        speechUtterance.voice = AVSpeechSynthesisVoice.init(identifier: "com.apple.ttsbundle.siri_female_en-GB_compact")
+        speechUtterance.rate = 0.4
+        speechSynthesizer.speak(speechUtterance)
     }
 
     override func didReceiveMemoryWarning() {

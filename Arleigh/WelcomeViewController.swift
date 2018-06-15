@@ -16,7 +16,7 @@ class WelcomeViewController: UIViewController {
     let speechSynthesizer = AVSpeechSynthesizer()
     
     func speakTerms() -> String{
-        let terms = "Welcome!  I'm Arleigh!  Let's commence by tapping Hello Arleigh to synchronize your Care Card."
+        let terms = "Hello!  Meet Arleigh!  Arleigh was created using open education resources on iOS frameworks, neuroscience, and psychology.  Our wishes are to provide you with enhanced day to day care.  We need to synchronize with your physician's Care Card.  Eventually, you will be able to speak to Arleigh using your own voice.  Can we begin downloading your care card by tapping Hello Arleigh?"
         return terms
     }
     
@@ -27,6 +27,7 @@ class WelcomeViewController: UIViewController {
         audioSegmentControl.backgroundColor = welcomeToArleighButton.backgroundColor
         audioSegmentControl.isHidden = true
         welcomeToArleighButton.backgroundColor = view.backgroundColor
+        welcomeToArleighButton.alpha = 0.8
         
         //view animation code
         let delay = 4.2 // time in seconds
