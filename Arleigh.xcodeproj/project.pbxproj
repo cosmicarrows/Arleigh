@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B8AE3258ADC7E8AD3BC166 /* Pods_Arleigh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB18FEE92E058EF921A31F /* Pods_Arleigh.framework */; };
+		E9899B5420D42528009B3BF7 /* ZCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9899B5320D42528009B3BF7 /* ZCService.swift */; };
+		E9899B5620D4255E009B3BF7 /* ZCServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9899B5520D4255E009B3BF7 /* ZCServiceProvider.swift */; };
+		E9899B5920D4259C009B3BF7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9899B5820D4259C009B3BF7 /* MockService.swift */; };
+		E9899B5B20D425BE009B3BF7 /* MockResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9899B5A20D425BE009B3BF7 /* MockResource.swift */; };
+		E9899B5E20D42608009B3BF7 /* CarePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9899B5D20D42608009B3BF7 /* CarePlan.swift */; };
+		E9899B6020D42630009B3BF7 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9899B5F20D42630009B3BF7 /* Activity.swift */; };
+		E9899B6320D4267A009B3BF7 /* careplan.json in Resources */ = {isa = PBXBuildFile; fileRef = E9899B6220D4267A009B3BF7 /* careplan.json */; };
 		E9FDBE0320D411520072D361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDBE0220D411520072D361 /* AppDelegate.swift */; };
 		E9FDBE0520D411520072D361 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDBE0420D411520072D361 /* ViewController.swift */; };
 		E9FDBE0820D411520072D361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FDBE0620D411520072D361 /* Main.storyboard */; };
@@ -79,6 +87,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66EB18FEE92E058EF921A31F /* Pods_Arleigh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arleigh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B586CF802F5CB7A32326D0 /* Pods-Arleigh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arleigh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Arleigh/Pods-Arleigh.release.xcconfig"; sourceTree = "<group>"; };
+		B7C137AB95748E3B39AAFA04 /* Pods-Arleigh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arleigh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Arleigh/Pods-Arleigh.debug.xcconfig"; sourceTree = "<group>"; };
+		E9899B5320D42528009B3BF7 /* ZCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCService.swift; sourceTree = "<group>"; };
+		E9899B5520D4255E009B3BF7 /* ZCServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCServiceProvider.swift; sourceTree = "<group>"; };
+		E9899B5820D4259C009B3BF7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		E9899B5A20D425BE009B3BF7 /* MockResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResource.swift; sourceTree = "<group>"; };
+		E9899B5D20D42608009B3BF7 /* CarePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlan.swift; sourceTree = "<group>"; };
+		E9899B5F20D42630009B3BF7 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		E9899B6220D4267A009B3BF7 /* careplan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = careplan.json; sourceTree = "<group>"; };
 		E9FDBDFF20D411520072D361 /* Arleigh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arleigh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FDBE0220D411520072D361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9FDBE0420D411520072D361 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,12 +116,65 @@
 			files = (
 				E9FDBE2D20D413EE0072D361 /* CareKit.framework in Frameworks */,
 				E9FDBE2820D413E60072D361 /* ResearchKit.framework in Frameworks */,
+				28B8AE3258ADC7E8AD3BC166 /* Pods_Arleigh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3A02962238DF2A3D6E4EE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7C137AB95748E3B39AAFA04 /* Pods-Arleigh.debug.xcconfig */,
+				72B586CF802F5CB7A32326D0 /* Pods-Arleigh.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7B310C74704EBC4002FE09F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66EB18FEE92E058EF921A31F /* Pods_Arleigh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9899B5220D424BE009B3BF7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E9899B5320D42528009B3BF7 /* ZCService.swift */,
+				E9899B5520D4255E009B3BF7 /* ZCServiceProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E9899B5720D42580009B3BF7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E9899B5820D4259C009B3BF7 /* MockService.swift */,
+				E9899B5A20D425BE009B3BF7 /* MockResource.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E9899B5C20D425F9009B3BF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9899B5D20D42608009B3BF7 /* CarePlan.swift */,
+				E9899B5F20D42630009B3BF7 /* Activity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9899B6120D42664009B3BF7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9899B6220D4267A009B3BF7 /* careplan.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E9FDBDF620D411520072D361 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +182,8 @@
 				E9FDBE1420D412550072D361 /* CareKit.xcodeproj */,
 				E9FDBE0120D411520072D361 /* Arleigh */,
 				E9FDBE0020D411520072D361 /* Products */,
+				4D3A02962238DF2A3D6E4EE0 /* Pods */,
+				B7B310C74704EBC4002FE09F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +198,10 @@
 		E9FDBE0120D411520072D361 /* Arleigh */ = {
 			isa = PBXGroup;
 			children = (
+				E9899B6120D42664009B3BF7 /* Resources */,
+				E9899B5C20D425F9009B3BF7 /* Model */,
+				E9899B5720D42580009B3BF7 /* Mocks */,
+				E9899B5220D424BE009B3BF7 /* Services */,
 				E9FDBE3120D414FD0072D361 /* Arleigh.entitlements */,
 				E9FDBE0220D411520072D361 /* AppDelegate.swift */,
 				E9FDBE0420D411520072D361 /* ViewController.swift */,
@@ -161,10 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9FDBE1120D411540072D361 /* Build configuration list for PBXNativeTarget "Arleigh" */;
 			buildPhases = (
+				002B1812B1CF530090D6D536 /* [CP] Check Pods Manifest.lock */,
 				E9FDBDFB20D411520072D361 /* Sources */,
 				E9FDBDFC20D411520072D361 /* Frameworks */,
 				E9FDBDFD20D411520072D361 /* Resources */,
 				E9FDBE2C20D413E60072D361 /* Embed Frameworks */,
+				D058FA3A1BC2E45854188265 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,10 +343,50 @@
 				E9FDBE0D20D411540072D361 /* LaunchScreen.storyboard in Resources */,
 				E9FDBE0A20D411540072D361 /* Assets.xcassets in Resources */,
 				E9FDBE0820D411520072D361 /* Main.storyboard in Resources */,
+				E9899B6320D4267A009B3BF7 /* careplan.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		002B1812B1CF530090D6D536 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Arleigh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D058FA3A1BC2E45854188265 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Arleigh/Pods-Arleigh-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Arleigh/Pods-Arleigh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9FDBDFB20D411520072D361 /* Sources */ = {
@@ -275,7 +394,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FDBE0520D411520072D361 /* ViewController.swift in Sources */,
+				E9899B5920D4259C009B3BF7 /* MockService.swift in Sources */,
+				E9899B5420D42528009B3BF7 /* ZCService.swift in Sources */,
+				E9899B5E20D42608009B3BF7 /* CarePlan.swift in Sources */,
 				E9FDBE0320D411520072D361 /* AppDelegate.swift in Sources */,
+				E9899B5620D4255E009B3BF7 /* ZCServiceProvider.swift in Sources */,
+				E9899B6020D42630009B3BF7 /* Activity.swift in Sources */,
+				E9899B5B20D425BE009B3BF7 /* MockResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +555,7 @@
 		};
 		E9FDBE1220D411540072D361 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C137AB95748E3B39AAFA04 /* Pods-Arleigh.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -450,6 +576,7 @@
 		};
 		E9FDBE1320D411540072D361 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B586CF802F5CB7A32326D0 /* Pods-Arleigh.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
