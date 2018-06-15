@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import AVFoundation
 
 class WelcomeViewController: UIViewController {
 
     @IBOutlet var audioSegmentControl: UISegmentedControl!
     @IBOutlet var welcomeToArleighButton: UIButton!
+    let speechSynthesizer = AVSpeechSynthesizer()
+    
+    func speakTerms() -> String{
+        let terms = "Hello, I'm Arleigh!  How are you feeling?  Feel free to speak to me with instructions on what you would like to do."
+        return terms
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeToArleighButton.layer.cornerRadius = 10
@@ -22,6 +31,10 @@ class WelcomeViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(animatedViewBackground), userInfo: nil, repeats: true)
         //end of view animation code
 
+        let speechUtterance = AVSpeechUtterance.init(string: speakTerms())
+        speechUtterance.voice = AVSpeechSynthesisVoice.init(identifier: "com.apple.ttsbundle.Samantha-compact")
+        speechUtterance.rate = 0.4
+        speechSynthesizer.speak(speechUtterance)
         // Do any additional setup after loading the view.
     }
 
@@ -47,6 +60,7 @@ class WelcomeViewController: UIViewController {
         case 1:
             sender.setTitle("Unmute Audio", forSegmentAt: 0)
             sender.setTitle("Audio Muted", forSegmentAt: 1)
+            speechSynthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
         default:
             break
         }
