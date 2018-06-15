@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //add a single b6 vitamin intake activity to the Care Plan Store
         createb6VitaminActivity()
-        createDeepBreathingActivity()
         //_clearStore()
     }
 
@@ -46,26 +45,7 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(careCardViewController, animated: true)
     }
     
-    func createDeepBreathingActivity(){
-        let deepBreathingIdentificer = "Deep Breathing"
-        store.activity(forIdentifier: deepBreathingIdentificer) { (success, foundActivity, error) in
-            guard success else {
-                fatalError()
-            }
-            if let activity = foundActivity {
-                print("Breathing Activity Already Found with the identifier \(activity.identifier)")
-            } else {
-                let startDay = DateComponents.init(year: 2018, month: 6, day: 15)
-                let thriceDay = OCKCareSchedule.dailySchedule(withStartDate: startDay, occurrencesPerDay: 4)
-                let deepBreathingExercise = OCKCarePlanActivity.init(identifier: "Practice Deep Breathing", groupIdentifier: nil, type: .intervention, title: "Deep Breathing Exercise", text: "4 Deep Breaths", tintColor: UIColor.green, instructions: "Take four deep breathes while counting...1...2...3...4...5...and then repeat three times", imageURL: nil, schedule: thriceDay, resultResettable: true, userInfo: nil)
-                self.store.add(deepBreathingExercise, completion: { (success, error) in
-                    guard success else {
-                        fatalError()
-                    }
-                })
-            }
-        }
-    }
+    
     
     //adding an intervention activity
     func createb6VitaminActivity(){
