@@ -7,9 +7,8 @@
 //
 
 import Foundation
-
-import Foundation
 import CareKit
+import SwiftyJSON
 
 /**
  Struct which encapsulates the CarePlan
@@ -46,7 +45,7 @@ extension CarePlan : ZCAPIResponse {
         
         do {
             
-            let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSDictionary
+            let json = try JSONSerialization.jsonObject(with: data! as Data, options: []) as! NSDictionary
             
             guard
                 let planID = json["planID"] as? Int,

@@ -21,18 +21,18 @@ func newZCService(type: ZCServiceType) -> ZCService {
 }
 
 func dateFromString(string: String) -> NSDate? {
-    let dateFormatter = NSDateFormatter()
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyyMMdd'T'HHmmssZ"
-    if let date = dateFormatter.dateFromString(string) {
-        return date
+    if let date = dateFormatter.date(from: string) {
+        return date as NSDate
     }
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mmZ"
-    if let date = dateFormatter.dateFromString(string) {
-        return date
+    if let date = dateFormatter.date(from: string) {
+        return date as NSDate
     }
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-    if let date = dateFormatter.dateFromString(string) {
-        return date
+    if let date = dateFormatter.date(from: string) {
+        return date as NSDate
     }
     return nil
 }

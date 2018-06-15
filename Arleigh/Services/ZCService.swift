@@ -25,7 +25,7 @@ public enum ZCServiceType: String {
 // Defines the request method that all services should use to load data
 protocol ZCService {
     
-    func request<T: ZCAPIResource, R: ZCAPIResponse>(resource:T, completion:(response:R?, error:NSError?)->Void)
+    func request<T: ZCAPIResource, R: ZCAPIResponse>(resource:T, completion:(_ response:R?, _ error:NSError?)->Void)
 }
 
 //defines the service request configuration

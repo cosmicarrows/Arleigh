@@ -7,6 +7,9 @@
 //
 
 import CareKit
+import SwiftyJSON
+
+
 
 enum ActivityType: String {
     case Intervention
@@ -51,11 +54,13 @@ struct ZCActivity : Activity {
             self.imageURL = nil
         }
         
-        self.startDate = dateFromString(json["startdate"].string!)!
+        self.startDate = dateFromString(string: json["startdate"].string!)!
         self.scheduleType = ScheduleType(rawValue: json["scheduletype"].string!)!
         
-        self.schedule = json["schedule"].string!.componentsSeparatedByString(",").map ( {
-            NSNumber(int: Int32($0)!)
+       
+        
+        self.schedule = json["schedule"].string!.components(separatedBy: ",").map ( {
+            NSNumber(value: Int32($0)!)
         })
         
         self.activityType = activityType
