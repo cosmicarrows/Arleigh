@@ -16,7 +16,7 @@ class WelcomeViewController: UIViewController {
     let speechSynthesizer = AVSpeechSynthesizer()
     
     func speakTerms() -> String{
-        let terms = "Hello, I'm Arleigh!  How are you feeling?  Feel free to speak to me with instructions on what you would like to do."
+        let terms = "Welcome!  I'm Arleigh!  Let's commence by tapping Hello Arleigh to synchronize your Care Card."
         return terms
     }
     
@@ -25,6 +25,8 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeToArleighButton.layer.cornerRadius = 10
         audioSegmentControl.backgroundColor = welcomeToArleighButton.backgroundColor
+        audioSegmentControl.isHidden = true
+        welcomeToArleighButton.backgroundColor = view.backgroundColor
         
         //view animation code
         let delay = 4.2 // time in seconds
@@ -32,7 +34,7 @@ class WelcomeViewController: UIViewController {
         //end of view animation code
 
         let speechUtterance = AVSpeechUtterance.init(string: speakTerms())
-        speechUtterance.voice = AVSpeechSynthesisVoice.init(identifier: "com.apple.ttsbundle.Samantha-compact")
+        speechUtterance.voice = AVSpeechSynthesisVoice.init(identifier: "com.apple.ttsbundle.siri_female_en-GB_compact")
         speechUtterance.rate = 0.4
         speechSynthesizer.speak(speechUtterance)
         // Do any additional setup after loading the view.
@@ -57,6 +59,7 @@ class WelcomeViewController: UIViewController {
         case 0:
             sender.setTitle("Playing Audio", forSegmentAt: 0)
             sender.setTitle("Mute Audio", forSegmentAt: 1)
+            speechSynthesizer.continueSpeaking()
         case 1:
             sender.setTitle("Unmute Audio", forSegmentAt: 0)
             sender.setTitle("Audio Muted", forSegmentAt: 1)

@@ -76,7 +76,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="ZmY-3k-09R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
                                 <state key="normal" title="HELLO ARLEIGH">
                                     <color key="titleColor" red="0.99606186151504517" green="0.99590319395065308" blue="0.9923674464225769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
