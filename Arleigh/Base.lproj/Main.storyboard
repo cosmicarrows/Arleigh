@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Arleigh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showCareCard" id="BYZ-38-t0r" customClass="ViewController" customModule="Arleigh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,5 +62,57 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="787.55622188905556"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="83T-pC-yDk">
+            <objects>
+                <viewController id="sMD-Pr-FdZ" customClass="WelcomeViewController" customModule="Arleigh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hu7-VM-bh3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arleighlogo" translatesAutoresizingMaskIntoConstraints="NO" id="l6Y-zy-Wlv">
+                                <rect key="frame" x="16" y="78" width="343" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSC-v7-9yW">
+                                <rect key="frame" x="16" y="344" width="343" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58714061975479126" green="0.76924735307693481" blue="0.91617447137832642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="WELCOME TO ARLEIGH">
+                                    <color key="titleColor" red="0.99606186151504517" green="0.99590319395065308" blue="0.9923674464225769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="welcomeButtonTapped:" destination="sMD-Pr-FdZ" eventType="touchUpInside" id="kY6-WX-YJf"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Ud-4Z-TIm">
+                                <rect key="frame" x="16" y="504" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Play Audio"/>
+                                    <segment title="Mute Audio"/>
+                                </segments>
+                                <color key="tintColor" red="0.99531847238540649" green="0.99259966611862183" blue="0.9957616925239563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="audioSegmentControlTapped:" destination="sMD-Pr-FdZ" eventType="valueChanged" id="3y9-id-8iW"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="DXY-Bn-p4B"/>
+                    </view>
+                    <connections>
+                        <outlet property="audioSegmentControl" destination="6Ud-4Z-TIm" id="p5v-qX-9zT"/>
+                        <outlet property="welcomeToArleighButton" destination="TSC-v7-9yW" id="Kdz-cP-GT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uY5-D2-cza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="803.74812593703155"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="arleighlogo" width="1024" height="1024"/>
+    </resources>
 </document>
