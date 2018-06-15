@@ -70,20 +70,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arleighlogo" translatesAutoresizingMaskIntoConstraints="NO" id="l6Y-zy-Wlv">
-                                <rect key="frame" x="16" y="78" width="343" height="218"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="218" id="KnL-7e-xl2"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSC-v7-9yW">
-                                <rect key="frame" x="16" y="344" width="343" height="91"/>
+                                <rect key="frame" x="16" y="504" width="343" height="91"/>
                                 <color key="backgroundColor" red="0.01779191754758358" green="0.33000248670578003" blue="0.95947974920272827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="ZmY-3k-09R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Start Arleigh">
+                                <state key="normal" title="HELLO ARLEIGH">
                                     <color key="titleColor" red="0.99606186151504517" green="0.99590319395065308" blue="0.9923674464225769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -91,7 +85,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Ud-4Z-TIm">
-                                <rect key="frame" x="16" y="504" width="343" height="29"/>
+                                <rect key="frame" x="16" y="619" width="343" height="29"/>
                                 <segments>
                                     <segment title="Playing Audio"/>
                                     <segment title="Mute Audio"/>
@@ -101,19 +95,25 @@
                                     <action selector="audioSegmentControlTapped:" destination="sMD-Pr-FdZ" eventType="valueChanged" id="3y9-id-8iW"/>
                                 </connections>
                             </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arleighlogo" translatesAutoresizingMaskIntoConstraints="NO" id="l6Y-zy-Wlv">
+                                <rect key="frame" x="16" y="201" width="343" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="KnL-7e-xl2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TSC-v7-9yW" firstAttribute="leading" secondItem="DXY-Bn-p4B" secondAttribute="leading" constant="16" id="9fe-OF-LAY"/>
                             <constraint firstItem="DXY-Bn-p4B" firstAttribute="trailing" secondItem="l6Y-zy-Wlv" secondAttribute="trailing" constant="16" id="Cma-iR-mAp"/>
                             <constraint firstItem="DXY-Bn-p4B" firstAttribute="trailing" secondItem="6Ud-4Z-TIm" secondAttribute="trailing" constant="16" id="CyR-xW-scO"/>
-                            <constraint firstItem="TSC-v7-9yW" firstAttribute="top" secondItem="l6Y-zy-Wlv" secondAttribute="bottom" constant="48" id="T2E-YX-AR1"/>
+                            <constraint firstItem="TSC-v7-9yW" firstAttribute="top" secondItem="l6Y-zy-Wlv" secondAttribute="bottom" constant="85" id="T2E-YX-AR1"/>
                             <constraint firstItem="DXY-Bn-p4B" firstAttribute="trailing" secondItem="TSC-v7-9yW" secondAttribute="trailing" constant="16" id="VGL-Hd-STo"/>
                             <constraint firstItem="6Ud-4Z-TIm" firstAttribute="leading" secondItem="DXY-Bn-p4B" secondAttribute="leading" constant="16" id="ZaN-nw-otj"/>
                             <constraint firstItem="l6Y-zy-Wlv" firstAttribute="leading" secondItem="DXY-Bn-p4B" secondAttribute="leading" constant="16" id="hhR-Fv-UbF"/>
-                            <constraint firstItem="l6Y-zy-Wlv" firstAttribute="top" secondItem="DXY-Bn-p4B" secondAttribute="top" constant="14" id="j1x-fr-fcU"/>
+                            <constraint firstItem="l6Y-zy-Wlv" firstAttribute="top" secondItem="DXY-Bn-p4B" secondAttribute="top" constant="137" id="j1x-fr-fcU"/>
                             <constraint firstItem="l6Y-zy-Wlv" firstAttribute="centerX" secondItem="DXY-Bn-p4B" secondAttribute="centerX" id="n0y-a5-M3V"/>
-                            <constraint firstItem="DXY-Bn-p4B" firstAttribute="bottom" secondItem="6Ud-4Z-TIm" secondAttribute="bottom" constant="135" id="srD-Er-yE0"/>
+                            <constraint firstItem="DXY-Bn-p4B" firstAttribute="bottom" secondItem="6Ud-4Z-TIm" secondAttribute="bottom" constant="20" id="srD-Er-yE0"/>
                             <constraint firstItem="TSC-v7-9yW" firstAttribute="centerX" secondItem="DXY-Bn-p4B" secondAttribute="centerX" id="xri-xO-g9t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DXY-Bn-p4B"/>
