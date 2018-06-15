@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeToArleighButton.layer.cornerRadius = 10
+        audioSegmentControl.backgroundColor = welcomeToArleighButton.backgroundColor
         
         //view animation code
         let delay = 4.2 // time in seconds
@@ -39,12 +40,23 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func audioSegmentControlTapped(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            sender.setTitle("Playing Audio", forSegmentAt: 0)
+            sender.setTitle("Mute Audio", forSegmentAt: 1)
+        case 1:
+            sender.setTitle("Unmute Audio", forSegmentAt: 0)
+            sender.setTitle("Audio Muted", forSegmentAt: 1)
+        default:
+            break
+        }
+        
     }
     
     func generateRandomColor() -> UIColor {
         let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
         let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
-        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.2 // from 0.5 to 1.0 to stay away from black
+        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 1.0 // from 0.5 to 1.0 to stay away from black
         
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
     }
@@ -52,8 +64,21 @@ class WelcomeViewController: UIViewController {
     @objc func animatedViewBackground(){
         UIView.animateKeyframes(withDuration: 4.0, delay: 0.0, options: .allowUserInteraction, animations: {
             self.view.backgroundColor = self.generateRandomColor()
-            self.welcomeToArleighButton.backgroundColor = self.generateRandomColor()
+            //self.welcomeToArleighButton.backgroundColor = self.generateRandomColor()
         }, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //hide the navigation bar on this view contoller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     /*
     // MARK: - Navigation
